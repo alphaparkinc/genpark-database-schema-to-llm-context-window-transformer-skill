@@ -1,0 +1,35 @@
+{
+  "name": "genpark-database-schema-to-llm-context-window-transformer-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Database schema & relational query results transformer into high-density LLM context windows.",
+  "author": "genpark",
+  "category": "developer",
+  "tags": [
+    "database-context",
+    "sql-to-llm",
+    "context-window",
+    "schema-transformer",
+    "ph-august-dev"
+  ],
+  "inputs": {
+    "db_connection_uri": {
+      "type": "string"
+    },
+    "query_tables": {
+      "type": "array"
+    }
+  },
+  "outputs": {
+    "context_token_size": {
+      "type": "integer"
+    },
+    "compressed_schema_md": {
+      "type": "string"
+    },
+    "query_ready": {
+      "type": "boolean"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
